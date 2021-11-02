@@ -1,0 +1,20 @@
+from preprocess import preprocesses
+import sys
+class Data_preprocess:
+    def __init__(self):
+        print('data preprocess 실행')
+
+
+    def run(self):
+        input_datadir = './train_img'
+        output_datadir = './aligned_img'
+
+        obj=preprocesses(input_datadir,output_datadir)
+        nrof_images_total,nrof_successfully_aligned=obj.collect_data()
+
+        print('Total number of images: %d' % nrof_images_total)
+        print('Number of successfully aligned images: %d' % nrof_successfully_aligned)
+        print("Data_preprocess Done")
+
+
+
